@@ -34,6 +34,12 @@ $response = curl_exec($curl);
 
 // Convert the result from JSON format to a PHP array
 $result = json_decode($response);
+if ( !is_object($result) ) {
+    die("Error handling result.\n");
+}
+if ( !isset($result->id) ) {
+    die("Error: {$result->name} - {$result->description}\n.");
+}
 
 // Get the session id
 $sessionId = $result->id;
@@ -61,6 +67,12 @@ $response = curl_exec($curl);
 
 // Convert the result from JSON format to a PHP array
 $result = json_decode($response);
+if ( !is_object($result) ) {
+    die("Error handling result.\n");
+}
+if ( !isset($result->id) ) {
+    die("Error: {$result->name} - {$result->description}\n.");
+}
 
 // Get the newly created record id
 $recordId = $result->id;
@@ -88,6 +100,12 @@ $response = curl_exec($curl);
 
 // Convert the result from JSON format to a PHP array
 $result = json_decode($response);
+if ( !is_object($result) ) {
+    die("Error handling result.\n");
+}
+if ( !isset($result->id) ) {
+    die("Error: {$result->name} - {$result->description}\n.");
+}
 
 // Get the record id of the record we just updated
 var_dump($result->id);
