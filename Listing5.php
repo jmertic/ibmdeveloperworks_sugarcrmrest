@@ -48,7 +48,7 @@ $sessionId = $result->id;
 $parameters = array(
     'session' => $sessionId,
     'module' => 'Contacts',
-    'name_value_lists' => 
+    'name_value_lists' => array(
         array(
             array('name' => 'first_name', 'value' => 'John'),
             array('name' => 'last_name', 'value' => 'Mertic'),
